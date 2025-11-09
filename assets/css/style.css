@@ -110,8 +110,8 @@ section h2::after {
     background-color: var(--primary-color);
 }
 
-/* Services Cards */
-.service-card {
+/* Expertise Cards */
+.expertise-card {
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -123,7 +123,7 @@ section h2::after {
     position: relative;
 }
 
-.service-card::before {
+.expertise-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -135,29 +135,41 @@ section h2::after {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover::before {
+.expertise-card:hover::before {
     transform: translateX(0);
 }
 
-.service-card:hover {
+.expertise-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-.service-card i {
+.expertise-card i {
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 
-.service-card h3 {
+.expertise-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
 }
 
-.service-card p {
+.expertise-card p {
     color: var(--secondary-color);
     margin-bottom: 0;
+}
+
+.expertise-card ul {
+    padding-left: 0px;
+    color: var(--secondary-color);
+    list-style-type: none;
+}
+
+/* Savoir-Faire Section */
+#savoir-faire i {
+    color: var(--primary-color);
+    /* margin-bottom: 1rem; */
 }
 
 /* Contact Form */
@@ -206,6 +218,12 @@ section h2::after {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+.timeline-container.left .timeline-content {
+    text-align: right;
+}
+.timeline-container.right .timeline-content{
+    text-align: left;
+}
 .timeline-container::after {
   content: '';
   position: absolute;
@@ -219,7 +237,7 @@ section h2::after {
   z-index: 1;
 }
 .timeline-container.left::after {
-  left: -10px;
+  right: -10px;
 }
 .timeline-container.right::after {
   left: -10px;
