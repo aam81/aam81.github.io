@@ -54,6 +54,26 @@ Slide 5
 
 Nos Clients
 
+viparis
+engie
+derichebourg
+edmond de rotschild
+atos
+safran
+sfr
+ibm
+
+
+spirit
+rte
+
+idex
+global switch
+vinci
+cbre
+apelona
+
+
 Et d’autres…
 
 Slide 6
