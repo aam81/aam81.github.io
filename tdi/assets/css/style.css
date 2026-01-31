@@ -13,7 +13,7 @@ body {
     background-color: var(--bg-pastel);
 }
 
-/* Navigation */navbar-
+/* Navigation */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
@@ -34,7 +34,14 @@ body {
 
 .navbar-brand {
     font-weight: bold;
-    margin: -30px 0 -30px 0;
+    height: 70px;
+    overflow: hidden;
+}
+
+.navbar-brand img {
+    object-fit: cover;
+    position: relative;
+    top: -30px;
 }
 
 /* Sections */
