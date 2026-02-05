@@ -1,0 +1,224 @@
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --bg-pastel: #e8f4f8;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-pastel);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.bg-white {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    height: 70px;
+    overflow: hidden;
+}
+
+.navbar-brand img {
+    object-fit: cover;
+    position: relative;
+    top: -30px;
+}
+
+/* Sections */
+section {
+    padding: 100px 0;
+    background-color: var(--bg-pastel);
+}
+
+section h2 {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+/* Expertise Cards */
+.expertise-card {
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+}
+
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.expertise-card:hover::before {
+    transform: translateX(0);
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.expertise-card i {
+    color: var(--primary-color);
+    /* margin-bottom: 1.5rem; */
+}
+
+.expertise-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.expertise-card p {
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.expertise-card ul {
+    padding-left: 0px;
+    color: var(--secondary-color);
+    list-style-type: none;
+}
+
+/* Savoir-Faire Section */
+#savoir-faire i {
+    color: var(--primary-color);
+    /* margin-bottom: 1rem; */
+}
+
+/* Contact Form */
+.form-control {
+    border-radius: 0;
+    padding: 12px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+.timeline-container.left {
+  left: 0;
+}
+.timeline-container.right {
+  left: 50%;
+}
+.timeline-content {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.timeline-container.left .timeline-content {
+    text-align: right;
+}
+.timeline-container.right .timeline-content{
+    text-align: left;
+}
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background: var(--primary-color);
+  border: 4px solid #fff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-container.left::after {
+  right: -10px;
+}
+.timeline-container.right::after {
+  left: -10px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .timeline-container {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .timeline::before {
+    left: 20px;
+  }
+}
